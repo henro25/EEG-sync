@@ -1,0 +1,12 @@
+synced_EEG_data_5 contains EEG streams from Group 5. It is an N x 24 matrix. 
+
+N rows are the greatest number of timestamps that an EEG stream encompasses. There are N/A values for streams that do not reach N timestamps. 
+
+24 columns are subset as follows
+- The first 8 are from "Unicorn_HCILab1"
+- The next 8 are from "Unicorn_HCILab2"
+- The last 8 are from "Unicorn_CSL_Laptop"
+
+All EEG streams start at UNIX time: 1730468870.5
+
+Note: Unicorn_CSL_LabPC is not available. There were only 3 participants in Group 5.

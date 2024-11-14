@@ -1,0 +1,11 @@
+synced_EEG_data_6 contains EEG streams from Group 6. It is an N x 32 matrix. 
+
+N rows are the greatest number of timestamps that an EEG stream encompasses. There are N/A values for streams that do not reach N timestamps. 
+
+32 columns are subset as follows
+- The first 8 are from "Unicorn_HCILab1"
+- The next 8 are from "Unicorn_HCILab2"
+- The next 8 are from "Unicorn_CSL_Laptop"
+- The last 8 are from "Unicorn_CSL_LabPC"
+
+All EEG streams start at UNIX time: 1731076488.6
