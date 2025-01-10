@@ -1,0 +1,38 @@
+synced_EEG_data_10 contains EEG streams from Group 10. It is an N x 24 matrix. 
+
+N rows are the greatest number of timestamps that an EEG stream encompasses. There are N/A values for streams that do not reach N timestamps. 
+
+24 columns are subset as follows
+- The first 8 are from "Unicorn_HCILab1"
+- The next 8 are from "Unicorn_HCILab2"
+- The next 8 are from "Unicorn_CSL_Laptop"
+
+Note: OBS_CSL_LabPC and Unicorn_CSL_LabPC stream was not recorded.
+
+All EEG streams start at UNIX time: 1736520337.5
+
+
+The channel labels for each stream are:
+
+- Fz
+- C3
+- Cz
+- C4
+- Pz
+- PO7
+- Oz
+- PO8
+
+Explicitly, in synced_EEG_data_9.mat, 
+
+Row 0 contains Unicorn_HCILab1's Fz channel,
+Row 1 contains Unicorn_HCILab1's C3 channel,
+Row 2 contains Unicorn_HCILab1's Cz channel,
+Row 3 contains Unicorn_HCILab1's C4 channel,
+Row 4 contains Unicorn_HCILab1's Pz channel,
+Row 5 contains Unicorn_HCILab1's P07 channel,
+Row 6 contains Unicorn_HCILab1's Oz channel,
+Row 7 contains Unicorn_HCILab1's POB channel,
+Row 8 contains Unicorn_HCILab2's Fz channel,
+Row 9 contains Unicorn_HCILab2's C3 channel,
+and so on...
