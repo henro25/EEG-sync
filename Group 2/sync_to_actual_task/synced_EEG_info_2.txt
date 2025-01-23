@@ -11,11 +11,7 @@ N rows are the greatest number of timestamps that an EEG stream encompasses. The
 All EEG streams start at UNIX time: 1727877596.924
 All EEG streams end at UNIX time:   1727881197.157
 
-Note: 
-
-1. Unicorn_CSL_LabPC was manually cut off since its corresponding OBS stream, OBS_CSL_LabPC, was not recorded.
-
-2. OBS_HCILab2 Stream warning of: Calculated effective sampling rate 16.8061 Hz is different from specified rate 30.0000 Hz and this affects the calculation of Unicorn_HCILab2's despite Unicorn_HCILab2 gaving a normal sampling rate. This leads to this stream (indicies 8 - 15 of the combined EEG stream) looking like it is cut off when it really isn’t, it just has fewer frames per second, but the frames has a high chance of not being aligned since the OBS_HCILab2 has a high chance of not being aligned.
+Note: Unicorn_CSL_LabPC was manually cut off since its corresponding OBS stream, OBS_CSL_LabPC, was not recorded.
 
 The channel labels for each stream are:
 

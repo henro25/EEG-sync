@@ -1,4 +1,4 @@
-synced_EEG_data_1 contains EEG streams from Group 1. It is an N x 32 matrix. 
+synced_EEG_data_6 contains EEG streams from Group 6. It is an N x 32 matrix. 
 
 N rows are the greatest number of timestamps that an EEG stream encompasses. There are N/A values for streams that do not reach N timestamps. 
 
@@ -8,14 +8,11 @@ N rows are the greatest number of timestamps that an EEG stream encompasses. The
 - The next 8 are from "Unicorn_CSL_Laptop"
 - The last 8 are from "Unicorn_CSL_LabPC"
 
-All EEG streams start at UNIX time: 1727792156.738
-All EEG streams end at UNIX time:   1727795730.971
+All EEG streams start at UNIX time: 1731076647.970
+All EEG streams end at UNIX time:   1731080278.120
 
-Note: 
+Note: Unicorn_HCILab2's stream appears to be cut off before the end of the actual task.
 
-1. Unicorn_CSL_LabPC was manually cut off since its corresponding OBS stream, OBS_CSL_LabPC, died before the last OBS stream began.
-
-2. Unicorn_HCILab2 Stream appears to have been cut off.
 
 The channel labels for each stream are:
 
@@ -28,7 +25,7 @@ The channel labels for each stream are:
 - Oz
 - PO8
 
-Explicitly, in synced_EEG_data_1.mat, 
+Explicitly, in synced_EEG_data_6.mat, 
 
 Row 0 contains Unicorn_HCILab1's Fz channel,
 Row 1 contains Unicorn_HCILab1's C3 channel,

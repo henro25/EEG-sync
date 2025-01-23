@@ -1,0 +1,25 @@
+WPI HCI Lab Streams before syncing:
+
+Stream Unicorn_HCILab1 has 1053174 time stamps and 1053174 time series
+Time stamps: [209.08688431746512 ... 4417.304959402173]
+
+Stream OBS_HCILab1 has 126238 time stamps and 126238 time series
+Time stamps: [209.44686320891068 ... 4417.34681503991]
+Time series (UNIX): [1737040096.435 ... 1737044304.335]
+
+Stream OBS_HCILab2 has 106392 time stamps and 106392 time series
+Time stamps: [197.593885266783 ... 4222.506397112957]
+Time series (UNIX): [1737040096.086 ... 1737044095.053]
+
+Stream Unicorn_HCILab2 has 960785 time stamps and 960785 time series
+Time stamps: [222.1347721104663 ... 4241.618309110771]
+
+
+CSL Lab Streams before syncing:
+
+Stream OBS_CSL_Laptop has 119203 time stamps and 119203 time series
+Time stamps: [1164.4747946958407 ... 5137.874755113064]
+Time series (UNIX): [1737040107.826 ... 1737044081.226]
+
+Stream Unicorn_CSL_Laptop has 994381 time stamps and 994381 time series
+Time stamps: [1164.3965081661245 ... 5137.837529958533]
