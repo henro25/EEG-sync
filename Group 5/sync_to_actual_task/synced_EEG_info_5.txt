@@ -16,3 +16,7 @@ Notes:
 
 1. Unicorn_CSL_LabPC is not available. There were only 3 participants in Group 5.
 2. Unicorn_HCILab2's stream seems to be cut off slightly early.
+
+For EEG Stream Unicorn_HCILab1, start cutoff index is 67796 and end cutoff index is 947569
+For EEG Stream Unicorn_HCILab2, start cutoff index is 58829 and end cutoff index is 926038
+For EEG Stream Unicorn_CSL_Laptop, start cutoff index is 67697 and end cutoff index is 947470

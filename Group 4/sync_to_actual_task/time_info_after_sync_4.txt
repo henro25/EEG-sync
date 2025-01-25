@@ -1,32 +1,32 @@
 WPI HCI Lab Streams AFTER syncing:
 
-Stream OBS_HCILab1 has 110057 time stamps and 110057 time series
-Time stamps: [3826.6586762655384 ... 7495.191976944778]
-Time series (UNIX): [1728395421.648 ... 1728399090.181]
+Stream Unicorn_HCILab1 has 930591 time stamps and 930591 time series
+Time stamps: [116583.06399446362 ... 120318.21775495644]
 
-Stream Unicorn_HCILab1 has 917146 time stamps and 917146 time series
-Time stamps: [3826.6598064172267 ... 7495.10078076452]
+Stream OBS_HCILab1 has 111671 time stamps and 111671 time series
+Time stamps: [116583.06172821557 ... 120305.3950320042]
+Time series (UNIX): [1728568480.494 ... 1728572202.827]
 
-Stream Unicorn_HCILab2 has 917146 time stamps and 917146 time series
-Time stamps: [3848.4123108772837 ... 7594.392142359229]
+Stream Unicorn_HCILab2 has 833456 time stamps and 833456 time series
+Time stamps: [116571.90959884493 ... 120384.47360887547]
 
-Stream OBS_HCILab2 has 55356 time stamps and 55356 time series
-Time stamps: [3848.4114369352474 ... 7477.474444654415]
-Time series (UNIX): [1728395421.63 ... 1728399090.152]
+Stream OBS_HCILab2 has 61710 time stamps and 61710 time series
+Time stamps: [116571.9077148141 ... 120279.69462224029]
+Time series (UNIX): [1728568480.56 ... 1728572202.732]
 
 
 CSL Lab Streams AFTER syncing:
 
-Stream OBS_CSL_Laptop has 110058 time stamps and 110058 time series
-Time stamps: [5462391.129910743 ... 5466059.696544218]
-Time series (UNIX): [1728395421.644 ... 1728399090.21]
+Stream Unicorn_CSL_Laptop has 930591 time stamps and 930591 time series
+Time stamps: [5635450.851149059 ... 5639171.640226084]
 
-Stream Unicorn_CSL_Laptop has 917146 time stamps and 917146 time series
-Time stamps: [5462391.130255302 ... 5466055.727408944]
+Stream OBS_CSL_Laptop has 111670 time stamps and 111670 time series
+Time stamps: [5635450.84959639 ... 5639173.149560089]
+Time series (UNIX): [1728568480.505 ... 1728572202.828]
 
-Stream Unicorn_CSL_LabPC has 917146 time stamps and 917146 time series
-Time stamps: [5462391.058092117 ... 5466059.6555234]
+Stream OBS_CSL_LabPC has 223342 time stamps and 223342 time series
+Time stamps: [5635450.719376589 ... 5639173.033300458]
+Time series (UNIX): [1728568480.474 ... 1728572202.824]
 
-Stream OBS_CSL_LabPC has 220115 time stamps and 220115 time series
-Time stamps: [5462391.055065892 ... 5466059.586189899]
-Time series (UNIX): [1728395421.629 ... 1728399090.196]
+Stream Unicorn_CSL_LabPC has 930591 time stamps and 930591 time series
+Time stamps: [5635450.720367126 ... 5639169.375774011]

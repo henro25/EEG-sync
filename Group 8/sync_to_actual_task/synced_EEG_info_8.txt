@@ -12,3 +12,8 @@ Each 8 columns correspond to channel labels: Fz, C3, Cz, C4, Pz, PO7, Oz, and PO
 
 All EEG streams start at UNIX time: 1731941662.689
 All EEG streams end at UNIX time:   1731945278.977
+
+For EEG Stream Unicorn_HCILab1, start cutoff index is 43907 and end cutoff index is 947979
+For EEG Stream Unicorn_HCILab2, start cutoff index is 33863 and end cutoff index is 937935
+For EEG Stream Unicorn_CSL_Laptop, start cutoff index is 38852 and end cutoff index is 942924
+For EEG Stream Unicorn_CSL_LabPC, start cutoff index is 39338 and end cutoff index is 943410

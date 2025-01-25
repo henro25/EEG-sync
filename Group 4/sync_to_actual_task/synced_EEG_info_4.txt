@@ -16,3 +16,8 @@ All EEG streams end at UNIX time:   1728572202.840
 Note:
 
 1. Unicorn_HCILab2 stream appears to have been slightly cut off.
+
+For EEG Stream Unicorn_HCILab1, start cutoff index is 56299 and end cutoff index is 986890
+For EEG Stream Unicorn_HCILab2, start cutoff index is 57867 and end cutoff index is 891323
+For EEG Stream Unicorn_CSL_Laptop, start cutoff index is 52612 and end cutoff index is 983203
+For EEG Stream Unicorn_CSL_LabPC, start cutoff index is 52592 and end cutoff index is 983183
