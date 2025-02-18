@@ -14,6 +14,6 @@ Note:
 1. Unicorn_CSL_LabPC's stream was not recorded. 
 2. Unicorn_HCILab2's stream appears to have been cut off before the end of the task.
 
-For EEG Stream Unicorn_HCILab1, start cutoff index is 2000 and end cutoff index is 906779
-For EEG Stream Unicorn_HCILab2, start cutoff index is 2000 and end cutoff index is 114249
-For EEG Stream Unicorn_CSL_Laptop, start cutoff index is 2000 and end cutoff index is 906779
+For EEG Stream Unicorn_HCILab1, start cutoff index is 9000 and end cutoff index is 913779
+For EEG Stream Unicorn_HCILab2, start cutoff index is 9000 and end cutoff index is 128249
+For EEG Stream Unicorn_CSL_Laptop, start cutoff index is 9000 and end cutoff index is 913779

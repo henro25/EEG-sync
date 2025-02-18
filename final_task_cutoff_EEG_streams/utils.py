@@ -50,11 +50,14 @@ def sync_streams(data_streams_1, data_streams_2, task_start_UNIX_times, task_dur
         print("length of EEG stream: " + str(len(EEG_stream["time_series"])))
         print("start_EEG_index: " + str(start_EEG_index) + ", end_EEG_index: " + str(end_EEG_index))
         
-        padded_start_EEG_index = start_EEG_index - 2000
-        padded_end_EEG_index = end_EEG_index + 2000
+        padded_start_EEG_index = start_EEG_index - 9000
+        padded_end_EEG_index = end_EEG_index + 9000
         print("padded_start_EEG_index: " + str(padded_start_EEG_index) + ", padded_end_EEG_index: " + str(padded_end_EEG_index))
         
-        assert padded_start_EEG_index > 0
+        start_cut_off_index = 9000
+        if padded_start_EEG_index < 0:
+            padded_start_EEG_index = 0
+            start_cut_off_index = start_EEG_index
         
         # Trim all the data in the EEG streams based on this index
         OG_EEG_stream_len = len(EEG_stream["time_series"])
@@ -62,9 +65,9 @@ def sync_streams(data_streams_1, data_streams_2, task_start_UNIX_times, task_dur
         EEG_stream["time_series"] = EEG_stream["time_series"][padded_start_EEG_index:padded_end_EEG_index]
     
         if end_EEG_index >= OG_EEG_stream_len:
-            print("[cut short] For EEG Stream " + EEG_stream_name + ", start cutoff index is 2000 and end cutoff index is " + str(len(EEG_stream["time_series"]) - padded_start_EEG_index))
+            print("[cut short] For EEG Stream " + EEG_stream_name + ", start cutoff index is " + str(start_cut_off_index) + " and end cutoff index is " + str(len(EEG_stream["time_series"]) - padded_start_EEG_index))
         else:
-            print("For EEG Stream " + EEG_stream_name + ", start cutoff index is 2000 and end cutoff index is " + str(end_EEG_index - padded_start_EEG_index))
+            print("For EEG Stream " + EEG_stream_name + ", start cutoff index is " + str(start_cut_off_index) + " and end cutoff index is " + str(end_EEG_index - padded_start_EEG_index))
         print()
     
     return streams

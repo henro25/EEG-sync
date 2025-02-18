@@ -10,7 +10,7 @@ N rows are the greatest number of timestamps that an EEG stream encompasses. The
 
 Each 8 columns correspond to channel labels: Fz, C3, Cz, C4, Pz, PO7, Oz, and PO8, in that order.
 
-For EEG Stream Unicorn_HCILab1, start cutoff index is 2000 and end cutoff index is 904183
-For EEG Stream Unicorn_HCILab2, start cutoff index is 2000 and end cutoff index is 904183
-For EEG Stream Unicorn_CSL_Laptop, start cutoff index is 2000 and end cutoff index is 904183
-For EEG Stream Unicorn_CSL_LabPC, start cutoff index is 2000 and end cutoff index is 904183
+For EEG Stream Unicorn_HCILab1, start cutoff index is 9000 and end cutoff index is 911183
+For EEG Stream Unicorn_HCILab2, start cutoff index is 9000 and end cutoff index is 911183
+For EEG Stream Unicorn_CSL_Laptop, start cutoff index is 9000 and end cutoff index is 911183
+For EEG Stream Unicorn_CSL_LabPC, start cutoff index is 9000 and end cutoff index is 911183
