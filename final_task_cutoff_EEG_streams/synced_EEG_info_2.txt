@@ -15,6 +15,6 @@ Notes:
 1. Unicorn_CSL_LabPC was manually cut off since its corresponding OBS stream, OBS_CSL_LabPC, was not recorded.
 
 For EEG Stream Unicorn_HCILab1, start cutoff index is 9000 and end cutoff index is 912358
-For EEG Stream Unicorn_HCILab2, start cutoff index is 9000 and end cutoff index is 912358
+For EEG Stream Unicorn_HCILab2, start cutoff index is 9000 and end cutoff index is 896317
 For EEG Stream Unicorn_CSL_Laptop, start cutoff index is 9000 and end cutoff index is 912358
-For EEG Stream Unicorn_CSL_LabPC, start cutoff index is 9000 and end cutoff index is 848584
+For EEG Stream Unicorn_CSL_LabPC, start cutoff index is 9000 and end cutoff index is 921358

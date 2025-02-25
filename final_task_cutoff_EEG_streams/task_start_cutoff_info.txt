@@ -11,13 +11,16 @@ Task Begin: Immediately after Chris says "Begin"
 Task End: Immediately after Chris says "Alright, time's up"
 
 CSL_Laptop
+Start OBS Vid  UNIX timestamp: 1727791819.271
 Task Beginning UNIX timestamp: 1727792156.738 (337 sec in)
 Task End       UNIX timestamp: 1727795729.938 (3910 sec in)
 
 HCI_Lab1
+Start OBS Vid  UNIX timestamp: 1727791888.508
 Task Beginning UNIX timestamp: 1727792156.738 (268 sec in)
 
 HCI_Lab2
+Start OBS Vid  UNIX timestamp: 1727791909.857
 Task Beginning UNIX timestamp: 1727792176.540 (266 sec in)
 
 Group 2:
@@ -26,13 +29,16 @@ Task Begin: Immediately after Chris says "Begin"
 Task End: Immediately before Chris says "Alright, yall forgot"
 
 CSL_Laptop
+Start OBS Vid  UNIX timestamp: 1727877264.624
 Task Beginning UNIX timestamp: 1727877596.691 (331 sec in)
 Task End       UNIX timestamp: 1727881210.124 (3945 sec in)
 
 HCI_Lab1
+Start OBS Vid  UNIX timestamp: 1727877407.049
 Task Beginning UNIX timestamp: 1727877595.516 (188 sec in)
 
 HCI_Lab2
+Start OBS Vid  UNIX timestamp: 1727877452.637
 Task Beginning UNIX timestamp: 1727877616.551 (163 sec in)
 
 Group 3:
@@ -41,16 +47,20 @@ Task Begin: Immediately after Lasse says "We'll keep track of time"
 Task End: Immediately before Chris says "Think you're all set."
  
 CSL_LabPC
+Start OBS Vid  UNIX timestamp: 1728395257.279
 Task Beginning UNIX timestamp: 1728395428.779 (171 sec in)
 Task End       UNIX timestamp: 1728399121.929 (3859 sec in)
 
 CSL_Laptop
+Start OBS Vid  UNIX timestamp: 1728395267.010
 Task Beginning UNIX timestamp: 1728395428.779 (161 sec in)
 
 HCI_Lab1
+Start OBS Vid  UNIX timestamp: 1728395264.881
 Task Beginning UNIX timestamp: 1728395428.779 (181 sec in)
 
 HCI_Lab2
+Start OBS Vid  UNIX timestamp: 1728396292.674
 Task Beginning UNIX timestamp: 1728395452.904 (160 sec in)
 
 Group 4:

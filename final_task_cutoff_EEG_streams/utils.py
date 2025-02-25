@@ -2,15 +2,15 @@ import matplotlib.pyplot as plt
 import numpy as np
 import scipy.io
 
-def sync_streams(data_streams_1, data_streams_2, task_start_UNIX_times, task_duration):
-    
+def sync_streams(data_streams_1, data_streams_2, video_start_UNIX_times, task_start_UNIX_times, task_duration):
     """
     Sync the data by trimming time_stamp and time_series streams so that all EEG and Unicorn Streams begin at the same time
     
     Parameters:
     - data_streams_1: Stream data from WPI HCI Lab xdf file
     - data_streams_2: Stream data from CSL Lab xdf file
-    - task_start_UNIX_time: Dictionary of the start time of each stream in Unix time and the end time for for a stream as well
+    - video_start_UNIX_time: Dictionary of the start OBS VIDEO time of each stream in Unix time
+    - task_start_UNIX_time: Dictionary of the start TASK time of each stream in Unix time and the end time for for a stream as well
     """
     
     # Holds the 8 streams (4 OBS and 4 Unicorn)
@@ -37,13 +37,43 @@ def sync_streams(data_streams_1, data_streams_2, task_start_UNIX_times, task_dur
         OBS_stream = streams[OBS_stream_name]
         EEG_stream = streams[EEG_stream_name]
         
-        # First, find the LabRecorder timestamp in the OBS stream that corresponds to the start and end Unix timestamp
-        OBS_unix_times = [ts[0] for ts in OBS_stream["time_series"]]
-        start_unix_timestamp = task_start_UNIX_times[OBS_stream_name]
-        start_OBS_index = np.searchsorted(OBS_unix_times, start_unix_timestamp)
+        # Debug with printing info
+        # print("\n\n")
+        # print("EEG stream name: " + EEG_stream_name)
+        # print("EEG stream LR timestamps begin at: " + str(EEG_stream["time_stamps"][0]))
+        # print("EEG stream LR timestamps end at: " + str(EEG_stream["time_stamps"][-1]))
+        # print("OBS stream UNIX time stamps begin at: " + str(OBS_stream["time_series"][0][0]))
+        # print("OBS stream UNIX time stamps end at: " + str(OBS_stream["time_series"][-1][0]))
+        # print("OBS stream LR timestamps begin at: " + str(OBS_stream["time_stamps"][0]))
+        # print("OBS stream LR timestamps end at: " + str(OBS_stream["time_stamps"][-1]))
+        # print()
         
-        start_labrecorder_timestamp = OBS_stream["time_stamps"][start_OBS_index]
-                                          
+        # # Debug with printing info we have
+        # print("video start UNIX time: " + str(video_start_UNIX_times[OBS_stream_name]))
+        # print("task start UNIX time: " + str(task_start_UNIX_times[OBS_stream_name]))
+        # print("task duration: " + str(task_duration))
+        # print()
+        
+        # Find the UNIX timestamp that corresponds to the start of the EEG stream
+        EEG_start_labrecorder_timestamp = EEG_stream["time_stamps"][0]
+        EEG_start_index_in_OBS = np.searchsorted(OBS_stream["time_stamps"], EEG_start_labrecorder_timestamp)
+        
+        # Find the index in the OBS stream where the video starts
+        OBS_unix_times = [ts[0] for ts in OBS_stream["time_series"]]
+        video_start_index_in_OBS = np.searchsorted(OBS_unix_times, video_start_UNIX_times[OBS_stream_name])
+        
+        # Find the first available correspondence where both the EEG and OBS streams are available, find the corresponding UNIX timestamp, and use that to get the start
+        shared_recording_start_index = max(EEG_start_index_in_OBS, video_start_index_in_OBS)
+        
+        # Use 250Hz as the sampling rate to find the start of the task
+        recording_start_to_task_start_duation = task_start_UNIX_times[OBS_stream_name] - OBS_unix_times[shared_recording_start_index]
+        
+        # TODO: start_labrecorder_timestamp IS CALCULATED INCORRECTLY
+        start_labrecorder_index = shared_recording_start_index + round(30 * recording_start_to_task_start_duation)
+        start_labrecorder_timestamp = OBS_stream["time_stamps"][start_labrecorder_index]
+        # print("shared_recording_start_index: " + str(shared_recording_start_index) + ", video_start_index_in_OBS: " + str(video_start_index_in_OBS) + ", EEG_start_index_in_OBS: " + str(EEG_start_index_in_OBS))
+        # print("recording_start_to_task_start_duation: " + str(recording_start_to_task_start_duation) + ", start_labrecorder_timestamp: " + str(start_labrecorder_timestamp))
+        
         # Find the index in the EEG stream where this LabRecorder timestamp occurs
         start_EEG_index = np.searchsorted(EEG_stream["time_stamps"], start_labrecorder_timestamp)
         end_EEG_index = start_EEG_index + round(250 * task_duration)
@@ -64,10 +94,14 @@ def sync_streams(data_streams_1, data_streams_2, task_start_UNIX_times, task_dur
         EEG_stream["time_stamps"] = EEG_stream["time_stamps"][padded_start_EEG_index:padded_end_EEG_index]
         EEG_stream["time_series"] = EEG_stream["time_series"][padded_start_EEG_index:padded_end_EEG_index]
     
+        acutal_end_EEG_index = len(EEG_stream["time_series"]) - max(0, min(OG_EEG_stream_len, padded_end_EEG_index) - end_EEG_index)
+        print("actual end EEG index: " + str(acutal_end_EEG_index))
         if end_EEG_index >= OG_EEG_stream_len:
-            print("[cut short] For EEG Stream " + EEG_stream_name + ", start cutoff index is " + str(start_cut_off_index) + " and end cutoff index is " + str(len(EEG_stream["time_series"]) - padded_start_EEG_index))
+            print("[cut short] For EEG Stream " + EEG_stream_name + ", start cutoff index is " + str(start_cut_off_index) + " and end cutoff index is " + str(len(EEG_stream["time_series"])))
+            assert len(EEG_stream["time_series"]) == acutal_end_EEG_index
         else:
             print("For EEG Stream " + EEG_stream_name + ", start cutoff index is " + str(start_cut_off_index) + " and end cutoff index is " + str(end_EEG_index - padded_start_EEG_index))
+            assert acutal_end_EEG_index == end_EEG_index - padded_start_EEG_index
         print()
     
     return streams
