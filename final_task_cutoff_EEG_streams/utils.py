@@ -68,7 +68,6 @@ def sync_streams(data_streams_1, data_streams_2, video_start_UNIX_times, task_st
         # Use 250Hz as the sampling rate to find the start of the task
         recording_start_to_task_start_duation = task_start_UNIX_times[OBS_stream_name] - OBS_unix_times[shared_recording_start_index]
         
-        # TODO: start_labrecorder_timestamp IS CALCULATED INCORRECTLY
         start_labrecorder_index = shared_recording_start_index + round(30 * recording_start_to_task_start_duation)
         start_labrecorder_timestamp = OBS_stream["time_stamps"][start_labrecorder_index]
         # print("shared_recording_start_index: " + str(shared_recording_start_index) + ", video_start_index_in_OBS: " + str(video_start_index_in_OBS) + ", EEG_start_index_in_OBS: " + str(EEG_start_index_in_OBS))
